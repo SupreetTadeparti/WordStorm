@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/stats.css">
+    <script src="js/stats.js" defer></script>
+    <title>Word Storm - Stats</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="name">
+            <%= name %>' Stats
+        </div>
+        <div class="stats-container">
+            <div class="stat">
+                <div class="stat__name">High Score:</div>
+                <div class="stat__value">
+                    <%= Math.max(0, ...games.map(game=> game.score)) %>
+                </div>
+            </div>
+            <div class="stat">
+                <div class="stat__name">Average Score:</div>
+                <div class="stat__value">
+                    <%= games.length===0 ? 0 : (games.map(game=> game.score).reduce((prev, curr) => prev + curr) /
+                        games.length).toFixed(2) %>
+                </div>
+            </div>
+            <div class="stat">
+                <div class="stat__name">Highest WPM:</div>
+                <div class="stat__value">
+                    <%= Math.max(0, ...games.map(game=> game.score)) / 5 %>
+                </div>
+            </div>
+            <div class="stat">
+                <div class="stat__name">Average WPM:</div>
+                <div class="stat__value">
+                    <%= (games.length===0 ? 0 : (games.map(game=> game.score).reduce((prev, curr) => prev + curr) /
+                        games.length) / 5).toFixed(2) %>
+                </div>
+            </div>
+            <div class="stat">
+                <div class="stat__name">Average Length of Words Typed:</div>
+                <div class="stat__value">
+                    <%= games.length===0 ? 0 : (games.map(game=> game.avgWordLen).reduce((prev, curr) => prev + curr) /
+                        games.length).toFixed(2) %>
+                </div>
+            </div>
+        </div>
+        <table class="stat-table">
+            <tr>
+                <th>Test No.</th>
+                <th>Score</th>
+                <th>Average Length</th>
+            </tr>
+            <% games.forEach((game, i)=> { %>
+                <tr>
+                    <td>
+                        <%= i + 1 %>
+                    </td>
+                    <td>
+                        <%= game.score %>
+                    </td>
+                    <td>
+                        <%= game.avgWordLen.toFixed(2) %>
+                    </td>
+                </tr>
+                <% }) %>
+        </table>
+    </div>
+</body>
+
+</html>

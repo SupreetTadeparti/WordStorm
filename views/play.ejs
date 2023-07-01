@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/play.css">
+    <script src="js/play.js" defer></script>
+    <title>Word Storm - Play</title>
+</head>
+
+<body>
+    <div class="page main-menu">
+        <div class="main-panel">
+            <div class="title">WORD STORM</div>
+            <div class="main-buttons">
+                <div class="start-btn btn">Begin</div>
+                <div class=" instructions-btn btn">Instructions</div>
+            </div>
+        </div>
+        <div class="instructions-panel hidden">
+            <div class="instructions">Words are falling from the sky. Type the word as fast as you can. The more words
+                you type, the higher score you get. Longer words will give you more points. You can buy new features
+                from the store using the points you earn in the game.</div>
+            <div class="back-btn btn">Back</div>
+        </div>
+    </div>
+    <div class="page container hidden">
+        <div class="score-container">
+            <div class="score-display">Score:</div>
+        </div>
+        <div class="words-container"></div>
+        <div class="type-input-container">
+            <input class="type-input" type="text" placeholder="Type Here..." />
+        </div>
+    </div>
+    <div class="result-page hidden">
+        <div class="result-container">
+            <div class="you-earned">You earned:</div>
+            <div class="coin-result">
+                <img src="img/coin.svg" class="coin-img">
+                <span class="coin-text"></span>
+            </div>
+            <div class="result-btns">
+                <div class="play-again-btn">Play again</div>
+                <div class="main-menu-btn">Main menu</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

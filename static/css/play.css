@@ -1,0 +1,191 @@
+/* Main Menu */
+
+.main-menu,
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.main-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-panel,
+.instructions-panel {
+  height: 50%;
+  width: 50%;
+  background-color: var(--primary);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3em;
+}
+
+.instructions {
+  margin: 2em;
+  color: white;
+  font-size: 1.5em;
+}
+
+.title {
+  color: white;
+  font-size: 5em;
+}
+
+.main-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+}
+
+.btn {
+  cursor: pointer;
+  min-width: 40%;
+  text-align: center;
+  font-size: 2em;
+  padding: 0.5em 1em;
+  background-color: var(--secondary);
+  border-radius: 0.1em;
+  transition: box-shadow 200ms linear, transform 200ms linear;
+}
+
+.btn:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 25px 10px rgba(225, 192, 236, 0.4);
+}
+
+/* Game */
+
+@keyframes fall {
+  to {
+    top: 100%;
+  }
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 7fr 1fr;
+}
+
+.type-input-container {
+  display: grid;
+  place-items: center;
+}
+
+.type-input {
+  text-align: center;
+  font-size: 1.2em;
+  padding: 0 1.5em;
+  width: 35%;
+  height: 3em;
+  border-radius: 0.25em;
+  border: 2px solid var(--primary);
+}
+
+.type-input:focus {
+  outline: none;
+}
+
+.words-container {
+  position: relative;
+}
+
+.falling-word {
+  position: absolute;
+  top: 0;
+  transform: translateY(-100%);
+  animation-name: fall;
+  animation-timing-function: linear;
+  background-color: var(--primary);
+  font-size: 1.2em;
+  color: white;
+  padding: 0.5em;
+  border-radius: 0.5em;
+}
+
+.score-display {
+  width: 100%;
+  text-align: center;
+  color: var(--primary);
+  font-size: 5em;
+}
+
+.score-container {
+  position: absolute;
+  width: 100%;
+}
+
+.result-page {
+  top: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.result-container {
+  height: 50%;
+  width: 50%;
+  background-color: var(--primary);
+  border-radius: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+}
+
+.you-earned {
+  margin-top: 1em;
+  color: white;
+  font-size: 2em;
+}
+
+.coin-img {
+  width: 10%;
+}
+
+.result-btns {
+  height: 20%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+}
+
+.result-btns * {
+  cursor: pointer;
+  width: 30%;
+  background-color: var(--secondary);
+  border-radius: 0.1em;
+  font-size: 2em;
+  display: grid;
+  place-items: center;
+  transition: box-shadow 200ms, transform 200ms;
+}
+
+.result-btns *:hover {
+  box-shadow: 0 0 25px 10px rgba(225, 192, 236, 0.4);
+  transform: scale(1.03);
+}
+
+.coin-result {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.coin-img {
+  width: 3em;
+}
+
+.coin-text {
+  color: white;
+  font-size: 2em;
+}

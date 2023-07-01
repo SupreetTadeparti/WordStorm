@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/shopping.css">
+    <script src="js/shopping.js" defer></script>
+    <title>Word Storm - Shopping</title>
+</head>
+
+<body>
+    <div class="shopping-page">
+        <div class="title">Welcome to the store <%= username %>! Ready to do some shopping?</div>
+        <div class="coins-container">
+            <img src="img/coin.svg" class="coin-img">
+            <span class="coin-text">
+                <%= coins %>
+            </span>
+        </div>
+        <div class="store">
+            <div class="item">
+                <div class="item-text">Highlights Large Words</div>
+                <div class="item-price">
+                    <img class="item-price__img" src="img/coin.svg" alt="coin">
+                    <span class="item-price__val">500</span>
+                </div>
+                <div class="purchase-btn">Purchase</div>
+            </div>
+            <div class="item">
+                <div class="item-text">Highlight Small Words</div>
+                <div class="item-price">
+                    <img class="item-price__img" src="img/coin.svg" alt="coin">
+                    <span class="item-price__val">400</span>
+                </div>
+                <div class="purchase-btn">Purchase</div>
+            </div>
+            <div class="item">
+                <div class="item-text">Customise Word Number</div>
+                <div class="item-price">
+                    <img class="item-price__img" src="img/coin.svg" alt="coin">
+                    <span class="item-price__val">450</span>
+                </div>
+                <div class="purchase-btn">Purchase</div>
+            </div>
+            <div class="item">
+                <div class="item-text">Customise Fall Order</div>
+                <div class="item-price">
+                    <img class="item-price__img" src="img/coin.svg" alt="coin">
+                    <span class="item-price__val">400</span>
+                </div>
+                <div class="purchase-btn">Purchase</div>
+            </div>
+            <div class="item">
+                <div class="item-text">Customize Average Word Length</div>
+                <div class="item-price">
+                    <img class="item-price__img" src="img/coin.svg" alt="coin">
+                    <span class="item-price__val">600</span>
+                </div>
+                <div class="purchase-btn">Purchase</div>
+            </div>
+            <div class="item">
+                <div class="item-text">Customize Fall Speed</div>
+                <div class="item-price">
+                    <img class="item-price__img" src="img/coin.svg" alt="coin">
+                    <span class="item-price__val">500</span>
+                </div>
+                <div class="purchase-btn">Purchase</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

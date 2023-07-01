@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/index.js" defer></script>
+    <title>WordStorm - Home</title>
+</head>
+
+<body>
+    <div class="page">
+        <div class="title">Word Storm</div>
+        <div class="container">
+            <a href="/shopping" class="shopping-container">
+                <div class="top">
+                    <img src="img/shopping.svg" />
+                </div>
+                <div class="bottom">Shopping</div>
+            </a>
+            <a href="/play" class="stats-container">
+                <div class="top">
+                    <img src="img/play.svg" />
+                </div>
+                <div class="bottom">Play</div>
+            </a>
+            <a href="/stats" class="play-container">
+                <div class="top">
+                    <img src="img/stats.svg" />
+                </div>
+                <div class="bottom">Stats</div>
+            </a>
+        </div>
+        <% if (!loggedIn) { %>
+            <a href="/login" class="login">Login</a>
+            <% } %>
+    </div>
+</body>
+
+</html>

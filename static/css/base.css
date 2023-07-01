@@ -1,0 +1,25 @@
+:root {
+  --text: #020408;
+  --background: #dce2f4;
+  --primary: #472d95;
+  --secondary: #e1c0ec;
+  --accent: #3a1547;
+}
+
+*,
+*::before,
+*::after {
+  color: var(--text);
+  font-family: Outfit;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  background-color: var(--background);
+}
+
+.hidden {
+  display: none !important;
+}
